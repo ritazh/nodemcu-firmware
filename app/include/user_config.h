@@ -24,7 +24,7 @@ extern void luaL_assertfail(const char *file, int line, const char *message);
 
 // This enables lots of debug output and changes the serial bit rate. This
 // is normally only used by hardcore developers
-// #define DEVELOP_VERSION
+#define DEVELOP_VERSION
 #ifdef DEVELOP_VERSION
 #define NODE_DEBUG
 #define COAP_DEBUG
@@ -62,7 +62,7 @@ extern void luaL_assertfail(const char *file, int line, const char *message);
 #define NO_INTR_CODE inline
 #endif
 
-//#define CLIENT_SSL_ENABLE
+#define CLIENT_SSL_ENABLE
 //#define MD2_ENABLE
 #define SHA2_ENABLE
 

@@ -874,6 +874,8 @@ static sint8 socket_connect(struct espconn *pesp_conn)
   if(mud->secure)
   {
       espconn_secure_set_size(ESPCONN_CLIENT, 5120); /* set SSL buffer size */
+      // espconn_secure_ca_disable(1);
+       espconn_secure_cert_req_enable(1,132);
       espconn_status = espconn_secure_connect(pesp_conn);
   }
   else
